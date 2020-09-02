@@ -15,7 +15,7 @@ npm i sczts-helpers
 import Helpers from "sczts-helpers"
 
 // 映入指定工具类
-import { Obj,Debounce } from "sczts-helpers"
+import { Obj,Arr } from "sczts-helpers"
 
 Helpers.Cache.remember('key',600,()=>123)
 Arr.pluck([{id:1,name:'name1'},{id:2,name:'name2'}],'id') // => [1,2]
