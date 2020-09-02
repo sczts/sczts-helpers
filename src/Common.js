@@ -3,6 +3,10 @@ var sczts_skeleton = {
     throttle: {}
 }
 
+/**
+ * 判断是否为空值
+ * @param {*} value 
+ */
 function empty(value) {
     if (value instanceof Array) {
         return value.length == 0;
