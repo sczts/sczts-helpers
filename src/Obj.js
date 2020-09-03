@@ -43,7 +43,11 @@ export default class Obj{
     let diff = {};
     for (let key in value1) {
       if (key in value2) {
-        if (value1[key] != value2[key]) {
+        if(value1[key] instanceof Array && value2[key] instanceof Array){
+          if(!Arr.equal(value1[key],value2[key])){
+            diff[key] = value1[key];
+          }
+        }else if (value1[key] != value2[key]) {
           diff[key] = value1[key];
         }
       } else {
@@ -52,8 +56,12 @@ export default class Obj{
     }
 
     for (let key in value2) {
-      if (key in value2) {
-        if (value2[key] != value1[key]) {
+      if (key in value1) {
+        if(value1[key] instanceof Array && value2[key] instanceof Array){
+          if(!Arr.equal(value1[key],value2[key])){
+            diff[key] = value2[key];
+          }
+        }else if (value2[key] != value1[key]) {
           diff[key] = value2[key];
         }
       } else {

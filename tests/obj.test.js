@@ -1,5 +1,5 @@
 import Obj from "../src/Obj"
-
+import Arr from "../src/Arr"
 let example = {
     val: 1,
     key: 'a',
@@ -37,5 +37,15 @@ test('helper_obj_diff', () => {
         child: {
             val: 2
         }
+    });
+
+    expect(Obj.diff({
+        group_id: 31,
+        participants: [111, 112, 113]
+    }, {
+        group_id: null,
+        participants: [111, 112, 113]
+    })).toStrictEqual({
+        group_id: null
     });
 })

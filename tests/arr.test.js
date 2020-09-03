@@ -17,6 +17,10 @@ let example = [{
     title: 'd'
 }]
 
+test('helper_arr_equal', () => {
+    expect(Arr.equal([111, 112, 113],[111, 112, 113])).toBe(true)
+});
+
 test('helper_arr_pluck', () => {
     expect(Arr.pluck(example, 'id')).toStrictEqual([1, 2, 3, 3, 3]);
     expect(Arr.pluck(example, 'name')).toStrictEqual([]);

@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "types": "types/index.d.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "repository": {
     "type": "git",

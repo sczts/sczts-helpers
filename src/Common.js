@@ -4,6 +4,14 @@ var sczts_skeleton = {
 }
 
 /**
+ * 拷贝
+ * @param {*} val 
+ */
+function copy(val){
+    return JSON.parse(JSON.stringify(val))
+}
+
+/**
  * 判断是否为空值
  * @param {*} value 
  */
@@ -65,6 +73,7 @@ function throttle(key, fn, delay) {
 
 
 export default {
+    copy,
     empty,
     debounce,
     throttle

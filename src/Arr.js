@@ -1,6 +1,26 @@
 export default class {
 
   /**
+   * 判断数组是否相等，包括顺序
+   * @param {array} array1 
+   * @param {array} array2 
+   */
+  static equal(array1, array2) {
+    if(array1.length != array2.length){
+      return false
+    }
+    for(let i =0;i<array1.length;i++){
+      if(array1[i] instanceof Array && array2[i] instanceof Array){
+        if(!this.equal(array1[i],array2[i])){
+          return false
+        }
+      }else if(array1[i] != array2[i]){
+        return false
+      }
+    }
+    return true
+  }
+  /**
    * 获取数组指定一列数据
    * @param {array} array
    * @param {string} colunm
