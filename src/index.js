@@ -5,11 +5,20 @@ import Random from "./Random"
 import Str from "./Str"
 import Common from "./Common"
 
+export {
+    Arr,
+    Cache,
+    Obj,
+    Random,
+    Str,
+    Common
+};
+
 export default {
     Arr,
     Cache,
     Obj,
     Random,
     Str,
-    ...Common
+    Common
 }

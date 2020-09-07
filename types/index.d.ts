@@ -1,6 +1,29 @@
-export function empty(value: any): boolean;
-export function debounce(key: string, fn: Function, delay: number): Function;
-export function throttle(key: string, fn: Function, delay: number): Function;
+
+
+export class Common{
+  /**
+   * 判断值是否为空
+   * @param value 
+   */
+  static empty(value: any): boolean;
+
+  /**
+   * 防抖
+   * @param key 
+   * @param fn 
+   * @param delay 
+   */
+  static debounce(key: string, fn: Function, delay: number): Function;
+
+  /**
+   * 节流
+   * @param key 
+   * @param fn 
+   * @param delay 
+   */
+  static throttle(key: string, fn: Function, delay: number): Function;
+  
+}
 
 export class Arr {
   /**
@@ -195,9 +218,7 @@ declare const _default: {
   Obj: typeof Obj;
   Random: typeof Random;
   Str: typeof Str;
-  empty: typeof empty;
-  debounce: typeof debounce;
-  throttle: typeof throttle;
+  Common: typeof Common;
 };
 
 export default _default;
