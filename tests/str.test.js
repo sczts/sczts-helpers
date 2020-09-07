@@ -23,5 +23,14 @@ test('helper_str_endWith', () => {
 test('helper_str_removeHtmlTag', () => {
     expect(Str.removeHtmlTag("<p>12345</p>")).toBe('12345');
     expect(Str.removeHtmlTag("<p>123&nbsp;45</p>")).toBe('12345');
-    expect(Str.removeHtmlTag("<p>123&nbsp;45</p>",' ')).toBe('123 45');
+    expect(Str.removeHtmlTag("<p>123&nbsp;45</p>", ' ')).toBe('123 45');
+});
+
+test('helper_str_getSuffix', () => {
+    expect(Str.getSuffix("/path/to/text.txt")).toBe('txt');
+    expect(Str.getSuffix("/path/to/text.txt.bak")).toBe('bak');
+    expect(Str.getSuffix("/path/to/text")).toBe(null);
+    expect(Str.getSuffix("/path/to/text",'/')).toBe('text');
+    expect(Str.getSuffix("/path/to/text-txt.bak",'-')).toBe('txt.bak');
+    expect(Str.getSuffix("/path/to/text.txt",'-')).toBe(null);
 });

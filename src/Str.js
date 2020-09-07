@@ -48,11 +48,24 @@ export default class {
   }
 
   /**
+   * 获取后缀
+   * @param {*} string 字符串
+   * @param {*} separator 后缀分隔符
+   */
+  static getSuffix(string, separator = '.') {
+    let chars = string.split(separator)
+    if (chars.length > 1) {
+      return chars[chars.length - 1]
+    }
+    return null
+  }
+
+  /**
    * 移除 html 标签及空格
    * @param {string} html 
    * @param {string} nbsp 替换空格
    */
-  static removeHtmlTag(html,nbsp='') {
+  static removeHtmlTag(html, nbsp = '') {
     return html.replace(/<[^>]+>/g, "").replace(/&nbsp;/ig, nbsp)
   }
 

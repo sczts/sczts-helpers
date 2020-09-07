@@ -1,28 +1,25 @@
-
-
-export class Common{
+export class Common {
   /**
    * 判断值是否为空
-   * @param value 
+   * @param value
    */
   static empty(value: any): boolean;
 
   /**
    * 防抖
-   * @param key 
-   * @param fn 
-   * @param delay 
+   * @param key
+   * @param fn
+   * @param delay
    */
   static debounce(key: string, fn: Function, delay: number): Function;
 
   /**
    * 节流
-   * @param key 
-   * @param fn 
-   * @param delay 
+   * @param key
+   * @param fn
+   * @param delay
    */
   static throttle(key: string, fn: Function, delay: number): Function;
-  
 }
 
 export class Arr {
@@ -106,21 +103,21 @@ export class Cache {
 
   /**
    * 设置缓存
-   * @param key 
-   * @param value 
+   * @param key
+   * @param value
    */
   static set(key: string, value: any): void;
 
   /**
    * 获取缓存
-   * @param key 
-   * @param _default 
+   * @param key
+   * @param _default
    */
   static get(key: string, _default?: any | null): void;
 
   /**
    * 删除指定缓存
-   * @param key 
+   * @param key
    */
   static forget(key: string): void;
 
@@ -128,7 +125,6 @@ export class Cache {
    * 清空所有缓存
    */
   static clear(): void;
-
 }
 
 export class Str {
@@ -167,6 +163,12 @@ export class Str {
    */
   static removeHtmlTag(html: string, nbsp?: string | ""): string;
 
+  /**
+   * 获取字符串后缀
+   * @param string 字符串
+   * @param separator 后缀分隔符
+   */
+  static getSuffix(string: string, separator?: string | "."): string | null;
 }
 
 export class Obj {
@@ -192,7 +194,6 @@ export class Obj {
    * @param object2
    */
   static diff(object1: object, object2: object): object;
-
 }
 
 export class Random {
@@ -209,7 +210,6 @@ export class Random {
    * @param maxNum
    */
   static number(minNum: number | 0, maxNum?: number | 100): number;
-  
 }
 
 declare const _default: {
